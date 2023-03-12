@@ -1,0 +1,218 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VieTravel</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="../content/css/style.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <a href="index.html"><img src="../content/images/VIETRAVEL - TRANQUILILY.png" alt="Logo"></a>
+    </div>
+    <ul class="navbar-menu">
+      <li><a href="depict.html">Giới Thiệu</a></li>
+      <li class="has-submenu">
+        <a href="#">Gói Tour</a>
+        <ul class="submenu">
+          <li><a href="#">Tour Châu Âu</a></li>
+          <li><a href="#">Tour Châu Á </a></li>
+          <li><a href="#">Tour Nam Mỹ</a></li>
+        </ul>
+      </li>
+      <li class="has-submenu">
+        <a href="#">Dịch Vụ</a>
+        <ul class="submenu">
+          <li><a href="#">Vé Máy Bay</a></li>
+          <li><a href="#">Vé Visa </a></li>
+          <li><a href="#">Vận chuyển - Đưa đón</a></li>
+          <li><a href="">Khách Sạn -Lưu Trú</a></li>
+        </ul>
+      </li>
+
+      <li class="has-submenu">
+        <a href="#">Tin Tức</a>
+        <ul class="submenu">
+          <li><a href="#">Tin Trong Nước</a></li>
+          <li><a href="#">Tin Quốc Tế </a></li>
+   
+        </ul>
+      </li>
+      <li class="has-submenu">
+        <a href="#">Thư Viện</a>
+        <ul class="submenu">
+          <li><a href="#">Hình Ảnh</a></li>
+          <li><a href="#">Video </a></li>
+ 
+        </ul>
+      </li>
+      <li><a href="#">Liên Hệ</a></li>
+      <li><a href="#">Đăng Ký</a></li>
+      <li class="has-submenu">
+        <a href="#">Đăng Nhập</a>
+        <ul class="submenu">
+          <li><a href="#">User</a></li>
+          <li><a href="#">Admin </a></li>
+        </ul>
+      </li>
+     
+      <li><a href="#"><i class="fas fa-search"></i></a>Tìm Kiếm</li>
+    </ul>
+  </nav>
+  <div class="slider">
+    <div class="slide slide1"></div>
+    <div class="slide slide2"></div>
+    <div class="slide slide3"></div>
+  </div>
+  <button class="prevBtn">Previous</button>
+  <button class="nextBtn">Next</button>
+      <script>
+        // Lấy danh sách tất cả các slide
+        const slides = document.querySelectorAll('.slide');
+
+        // Thiết lập biến cho slide hiện tại và slide kế tiếp
+        let currentSlide = 0;
+        let nextSlide = 1;
+
+        // Hiển thị slide đầu tiên
+        slides[currentSlide].classList.add('active');
+
+        // Lấy button previous và next
+        const prevBtn = document.querySelector('.prevBtn');
+        const nextBtn = document.querySelector('.nextBtn');
+
+        // Thiết lập sự kiện click cho button previous
+        prevBtn.addEventListener('click', () => {
+          // Ẩn slide hiện tại
+          slides[currentSlide].classList.remove('active');
+          // Tính toán slide trước đó và hiển thị
+          currentSlide--;
+          if (currentSlide < 0) {
+            currentSlide = slides.length - 1;
+          }
+          slides[currentSlide].classList.add('active');
+        });
+
+        // Thiết lập sự kiện click cho button next
+        nextBtn.addEventListener('click', () => {
+          // Ẩn slide hiện tại
+          slides[currentSlide].classList.remove('active');
+          // Tính toán slide kế tiếp và hiển thị
+          currentSlide++;
+          if (currentSlide >= slides.length) {
+            currentSlide = 0;
+          }
+          slides[currentSlide].classList.add('active');
+        });
+      </script>
+      <aside>
+        <div class="intro">
+          <div class="img">
+            <img src="../content/images/img-about-home.png" width="400px" height="400px" alt="Ảnh Qủa Địa Cầu">
+          </div>
+          <div class="intro-child">
+            <h1>Giới Thiệu</h1>
+            <p>Welcome to our travel website – the perfect place to discover amazing things around the world. With thousands of destinations, we offer the best experiences from big cities to remote villages. Using advanced technology, we provide you with the most reliable and detailed travel information. You can search for your favorite places, book flights, hotels, and find exciting tours at competitive prices. Our user-friendly website makes it easy for you to search and book quickly and conveniently. Our customer support team is always ready to help you with any questions. Join us for unforgettable trips and create wonderful memories with your loved ones.</p>
+            <div class="more">
+              Tìm Hiểu Thêm
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- sản phẩm -->
+      <div class="product-row">
+        <div class="product">
+          <img class="image" src="../content/images/sp1.jpg" alt="Product 1">
+         <a href="product.html"> <h3>Paris-Pháp</h3></a>
+          <p class="price">25.000.000 vnđ</p>
+          <p> Thời gian: 7 ngày 6 đêm</p>
+        </div>
+        <div class="product">
+          <img class="image" src="../content/images/sp2.jpg" alt="Product 2">
+          <a href="#"><h3>Venice -Ý</h3></a>
+          <p class="price">15.000.000 vnđ</p>
+          <p>Thời gian : 2 ngày 1 đêm</p>
+        </div>
+        <div class="product">
+          <img class="image" src="../content/images/sp3.jpg" alt="Product 3">
+         <a href="#"> <h3>Singapore</h3></a>
+          <p class="price">15.000.000 vnđ</p>
+          <p>Thời gian : 3 ngày 2 đêm </p>
+        </div>
+        <div class="product">
+          <img class="image" src="../content/images/sp4.jpg" alt="Product 4">
+        <a href="#"> <h3>Trung Quốc</h3></a>
+          <p class="price">10.000.000 vnđ</p>
+          <p>Thời Gian : 4 ngày 3 đêm</p>
+        </div>
+      </div>
+      <h1>Dịch Vụ</h1>
+      <br>
+      <div class="service">
+        <div class="visa-service">
+          <img src="../content/images/visa.png" alt="visa">
+          <h3>Đăng Ký Visa</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.</p>
+        </div>
+        <div class="ticket-service">
+          <img src="../content/images/plane.png" alt="plane">
+          <h3>Vé Máy Bay</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.</p>
+        </div>
+        <div class="transport">
+          <img src="../content/images/bus.png" alt="transport">
+          <h3>Vận chuyển - Đưa Đón</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.</p>
+        </div>
+        <div class="hotel">
+          <img src="../content/images/hotel.png" alt="hotel">
+          <h3>Khách sạn - lưu trú</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.</p>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="banner">
+        <img src="../content/images/thư giản trên bờ biển.jpg" alt="">
+      </div>
+      <footer>
+        <div class="fst">
+          <p>VieTravel</p>
+          <p>Địa chỉ: 750 Sư Vạn Hạnh (nối dài) <br>P.12, Q.10, TP.HCM, Việt Nam</p>
+          <p>Điện Thoại: 028 6256 3737</p>
+          <p>Email: info@pavietnam.vn</p>
+        </div>
+        <div class="tst">
+          <p>Dịch Vụ</p>
+          <p>Đăng ký visa</p>
+          <p>Đăng Ký vé máy bay</p>
+          <p>Vận chuyển - đưa đón</p>
+          <p>Khách Sạn - Lưu Trú</p>
+        </div>
+        <div class="thst">
+          <p>Tour Du Lịch</p>
+          <p>Tour Châu Âu</p>
+          <p>Tour Châu Á</p>
+          <p>Tour Bắc Mỹ</p>
+        </div>
+        <div class="fst">
+          <p>Danh Mục</p>
+          <p>Trang Chủ</p>
+          <p>Giới Thiệu</p>
+          <p>Dịch Vụ</p>
+          <p>Tin Tức</p>
+        </div>
+      </footer>
+
+</body>
+
+</html>
